@@ -1,0 +1,937 @@
+Fabindia.com Manual Test Plan
+
+1. Homepage & Global Navigation
+--------------------------------
+Test Case ID: HOM_NAV_001
+Title: Homepage loads and all elements visible
+Module: Homepage & Navigation
+Preconditions: User accesses homepage URL
+Test Steps:
+  1. Open homepage URL
+  2. Observe load time
+  3. Verify visibility of header, banners, navigation, footer
+Test Data: N/A
+Expected Result: Homepage loads within 3 seconds; all elements visible
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: Test on multiple browsers/devices
+
+Test Case ID: HOM_NAV_002
+Title: Top navigation links redirect correctly
+Module: Homepage & Navigation
+Preconditions: Homepage loaded
+Test Steps:
+  1. Click each top navigation link
+  2. Verify redirection to correct page
+Test Data: N/A
+Expected Result: Each link redirects to correct page
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: Include category, offers, account links
+
+Test Case ID: HOM_NAV_003
+Title: Footer links redirect correctly
+Module: Homepage & Navigation
+Preconditions: Homepage loaded
+Test Steps:
+  1. Click each footer link
+  2. Verify redirection to correct page
+Test Data: N/A
+Expected Result: Each footer link redirects to correct page
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: Check links for social media, policies, etc.
+
+Test Case ID: HOM_NAV_004
+Title: Language selection changes site language
+Module: Homepage & Navigation
+Preconditions: Homepage loaded
+Test Steps:
+  1. Select a different language
+  2. Verify homepage content in selected language
+Test Data: Language: Hindi
+Expected Result: Homepage content displayed in Hindi
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: Test with available languages
+
+Test Case ID: HOM_NAV_005
+Title: Currency switcher changes displayed currency
+Module: Homepage & Navigation
+Preconditions: Homepage loaded
+Test Steps:
+  1. Change currency from dropdown
+  2. Verify prices in selected currency
+Test Data: Currency: USD
+Expected Result: Prices displayed in USD
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: Ensure exchange rate is reasonable
+
+2. Product Listing & Filters
+----------------------------
+Test Case ID: PROD_LIST_001
+Title: Category navigation displays correct products
+Module: Product Listing
+Preconditions: Homepage loaded
+Test Steps:
+  1. Click on a category
+  2. Verify product list matches category
+Test Data: Category: "Men's Kurtas"
+Expected Result: Only men's kurtas displayed
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+Test Case ID: PROD_LIST_002
+Title: Filter by price updates product list
+Module: Product Listing
+Preconditions: Category page loaded
+Test Steps:
+  1. Apply price filter
+  2. Verify products match filter
+Test Data: Price: ₹1000-₹2000
+Expected Result: Only products within price range displayed
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: PROD_LIST_003
+Title: Sorting by price (low to high) displays products in correct order
+Module: Product Listing
+Preconditions: Category page loaded
+Test Steps:
+  1. Select sort option: Price Low to High
+  2. Verify products are sorted accordingly
+Test Data: Sort: Price Low to High
+Expected Result: Products sorted from lowest to highest price
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: PROD_LIST_004
+Title: Pagination displays next set of products correctly
+Module: Product Listing
+Preconditions: Category page loaded with more than one page of products
+Test Steps:
+  1. Click on next page/pagination control
+  2. Verify new products are loaded
+Test Data: Page 2
+Expected Result: Next set of products displayed
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: PROD_LIST_005
+Title: Applying multiple filters (price and color) displays correct products
+Module: Product Listing
+Preconditions: Category page loaded
+Test Steps:
+  1. Apply price filter
+  2. Apply color filter
+  3. Verify products match both filters
+Test Data: Price: ₹1000-₹2000, Color: Blue
+Expected Result: Only blue products within price range displayed
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+3. Product Detail Page
+----------------------
+Test Case ID: PROD_DET_001
+Title: Product details and images are visible
+Module: Product Detail
+Preconditions: Product page loaded
+Test Steps:
+  1. Open product page
+  2. Verify name, price, description, images
+Test Data: Product: "Blue Cotton Kurta"
+Expected Result: All details and images visible
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+Test Case ID: PROD_DET_002
+Title: Add to Cart functionality works
+Module: Product Detail
+Preconditions: Product page loaded
+Test Steps:
+  1. Select size/color
+  2. Click "Add to Cart"
+  3. Verify item in cart
+Test Data: Size: M, Color: Blue
+Expected Result: Item added to cart
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+Test Case ID: PROD_DET_003
+Title: Product availability updates after filter selection
+Module: Product Detail
+Preconditions: Product page loaded
+Test Steps:
+  1. Select a size/color that is out of stock
+  2. Verify availability message
+Test Data: Size: XL, Color: Red
+Expected Result: Out of stock message displayed
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: PROD_DET_004
+Title: Image gallery allows navigation between images
+Module: Product Detail
+Preconditions: Product page loaded
+Test Steps:
+  1. Click next/previous on image gallery
+  2. Verify image changes
+Test Data: N/A
+Expected Result: Image changes as per navigation
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: PROD_DET_005
+Title: Add to Wishlist functionality works
+Module: Product Detail
+Preconditions: Product page loaded
+Test Steps:
+  1. Click "Add to Wishlist"
+  2. Verify item added to wishlist
+Test Data: Product: "Blue Cotton Kurta"
+Expected Result: Item added to wishlist
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+4. Cart Management
+-------------------
+Test Case ID: CART_001
+Title: Update quantity in cart recalculates price
+Module: Cart Management
+Preconditions: Item in cart
+Test Steps:
+  1. Change quantity
+  2. Verify price updates
+Test Data: Quantity: 2
+Expected Result: Price recalculated for 2 items
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+Test Case ID: CART_002
+Title: Remove item from cart updates total
+Module: Cart Management
+Preconditions: Multiple items in cart
+Test Steps:
+  1. Remove one item
+  2. Verify total updates
+Test Data: N/A
+Expected Result: Total price updated, item removed
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+Test Case ID: CART_003
+Title: Cart persists after user logs out and logs in
+Module: Cart Management
+Preconditions: Item in cart, user logged in
+Test Steps:
+  1. Log out
+  2. Log in again
+  3. Verify cart items persist
+Test Data: N/A
+Expected Result: Cart items remain after login
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: CART_004
+Title: Coupon code applies correct discount
+Module: Cart Management
+Preconditions: Item in cart
+Test Steps:
+  1. Enter valid coupon code
+  2. Verify discount applied
+Test Data: Coupon: "SAVE10"
+Expected Result: Discount applied to total
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: CART_005
+Title: Invalid coupon code shows error message
+Module: Cart Management
+Preconditions: Item in cart
+Test Steps:
+  1. Enter invalid coupon code
+  2. Verify error message
+Test Data: Coupon: "INVALID"
+Expected Result: Error message displayed
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+5. Checkout Workflow
+---------------------
+Test Case ID: CHECKOUT_001
+Title: Guest checkout flow completes successfully
+Module: Checkout
+Preconditions: Items in cart
+Test Steps:
+  1. Proceed to checkout
+  2. Enter address
+  3. Select shipping
+  4. Complete payment
+Test Data: Address, payment details
+Expected Result: Order placed, confirmation displayed
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+Test Case ID: CHECKOUT_002
+Title: Registered user checkout flow completes successfully
+Module: Checkout
+Preconditions: Items in cart, user logged in
+Test Steps:
+  1. Proceed to checkout
+  2. Enter address
+  3. Select shipping
+  4. Complete payment
+Test Data: Address, payment details
+Expected Result: Order placed, confirmation displayed
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+Test Case ID: CHECKOUT_003
+Title: Address validation prevents invalid entries
+Module: Checkout
+Preconditions: Checkout page loaded
+Test Steps:
+  1. Enter invalid address
+  2. Try to proceed
+Test Data: Address: "123"
+Expected Result: Error message for invalid address
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: CHECKOUT_004
+Title: Shipping cost updates based on address
+Module: Checkout
+Preconditions: Checkout page loaded
+Test Steps:
+  1. Enter different address
+  2. Verify shipping cost updates
+Test Data: Address: Mumbai, Delhi
+Expected Result: Shipping cost updates accordingly
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: CHECKOUT_005
+Title: Payment gateway redirection works
+Module: Checkout
+Preconditions: Checkout page loaded
+Test Steps:
+  1. Select payment method
+  2. Proceed to payment
+Test Data: Payment: Credit Card
+Expected Result: Redirected to payment gateway
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+6. User Account & Profile
+--------------------------
+Test Case ID: USER_001
+Title: User signup with valid details
+Module: User Account
+Preconditions: Signup page loaded
+Test Steps:
+  1. Enter valid details
+  2. Submit form
+  3. Verify account created
+Test Data: Name, email, password
+Expected Result: Account created, user logged in
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+Test Case ID: USER_002
+Title: Password reset with valid email
+Module: User Account
+Preconditions: Forgot password page loaded
+Test Steps:
+  1. Enter registered email
+  2. Submit
+  3. Verify reset email sent
+Test Data: Registered email
+Expected Result: Reset email sent
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: USER_003
+Title: Login with invalid credentials shows error
+Module: User Account
+Preconditions: Login page loaded
+Test Steps:
+  1. Enter invalid credentials
+  2. Submit
+Test Data: Email: "wrong@fabindia.com", Password: "wrongpass"
+Expected Result: Error message displayed
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+Test Case ID: USER_004
+Title: Profile update saves changes
+Module: User Account
+Preconditions: User logged in
+Test Steps:
+  1. Edit profile details
+  2. Save changes
+Test Data: Name: "New Name"
+Expected Result: Profile updated
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: USER_005
+Title: Address book allows adding new address
+Module: User Account
+Preconditions: User logged in
+Test Steps:
+  1. Add new address
+  2. Save
+Test Data: Address: "123 New Street"
+Expected Result: Address added to address book
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+7. Search Functionality
+------------------------
+Test Case ID: SEARCH_001
+Title: Keyword search returns relevant products
+Module: Search
+Preconditions: Homepage loaded
+Test Steps:
+  1. Enter keyword
+  2. Submit search
+  3. Verify results
+Test Data: Keyword: "kurta"
+Expected Result: Relevant products displayed
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+Test Case ID: SEARCH_002
+Title: Auto-suggestions appear for popular keywords
+Module: Search
+Preconditions: Homepage loaded
+Test Steps:
+  1. Start typing keyword
+  2. Verify auto-suggestions appear
+Test Data: Keyword: "kurta"
+Expected Result: Suggestions displayed
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: SEARCH_003
+Title: Recent searches are displayed
+Module: Search
+Preconditions: User has performed previous searches
+Test Steps:
+  1. Click on search box
+  2. Verify recent searches appear
+Test Data: Previous: "kurta", "saree"
+Expected Result: Recent searches displayed
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: SEARCH_004
+Title: Empty search shows appropriate message
+Module: Search
+Preconditions: Homepage loaded
+Test Steps:
+  1. Submit empty search
+Test Data: N/A
+Expected Result: Message: "Please enter a search term"
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: SEARCH_005
+Title: Filter and sort work in search results
+Module: Search
+Preconditions: Search results displayed
+Test Steps:
+  1. Apply filter
+  2. Apply sort
+Test Data: Filter: Color, Sort: Price
+Expected Result: Results update accordingly
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+8. Payments & Transactions
+---------------------------
+Test Case ID: PAYMENT_001
+Title: Payment via credit card succeeds
+Module: Payments
+Preconditions: Checkout page loaded
+Test Steps:
+  1. Select credit card
+  2. Enter details
+  3. Complete payment
+Test Data: Card details
+Expected Result: Payment successful, order confirmed
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+Test Case ID: PAYMENT_002
+Title: Payment via UPI succeeds
+Module: Payments
+Preconditions: Checkout page loaded
+Test Steps:
+  1. Select UPI
+  2. Enter details
+  3. Complete payment
+Test Data: UPI ID
+Expected Result: Payment successful, order confirmed
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+Test Case ID: PAYMENT_003
+Title: Payment failure displays error message
+Module: Payments
+Preconditions: Checkout page loaded
+Test Steps:
+  1. Enter invalid payment details
+  2. Attempt payment
+Test Data: Invalid card
+Expected Result: Error message displayed
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+Test Case ID: PAYMENT_004
+Title: Payment timeout handled gracefully
+Module: Payments
+Preconditions: Checkout page loaded
+Test Steps:
+  1. Simulate payment timeout
+Test Data: N/A
+Expected Result: Timeout message displayed
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: PAYMENT_005
+Title: Invoice generation and download works
+Module: Payments
+Preconditions: Order placed
+Test Steps:
+  1. Download invoice
+Test Data: Order ID
+Expected Result: Invoice downloaded
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+9. Mobile Responsiveness & Cross-Platform Compatibility
+-------------------------------------------------------
+Test Case ID: MOBILE_001
+Title: Homepage layout adapts to mobile screen
+Module: Mobile Responsiveness
+Preconditions: Access site on mobile device
+Test Steps:
+  1. Open homepage on mobile
+  2. Verify layout and navigation
+Test Data: Device: iPhone, Android
+Expected Result: Layout adapts, navigation usable
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+Test Case ID: MOBILE_002
+Title: Menu usability on small screens
+Module: Mobile Responsiveness
+Preconditions: Mobile device
+Test Steps:
+  1. Open menu
+  2. Navigate categories
+Test Data: Device: iPhone
+Expected Result: Menu usable
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: MOBILE_003
+Title: Filter usability on mobile
+Module: Mobile Responsiveness
+Preconditions: Mobile device
+Test Steps:
+  1. Apply filter
+Test Data: Color: Blue
+Expected Result: Filter works on mobile
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: MOBILE_004
+Title: Browser compatibility for key flows
+Module: Mobile Responsiveness
+Preconditions: Multiple browsers
+Test Steps:
+  1. Test homepage, product, cart on Chrome, Safari
+Test Data: Browsers: Chrome, Safari
+Expected Result: Flows work on all browsers
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: MOBILE_005
+Title: Touch gestures work for image gallery
+Module: Mobile Responsiveness
+Preconditions: Mobile device
+Test Steps:
+  1. Swipe image gallery
+Test Data: N/A
+Expected Result: Images change on swipe
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+10. Security & Access Control
+-----------------------------
+Test Case ID: SEC_001
+Title: Unauthenticated user cannot access account page
+Module: Security
+Preconditions: Not logged in
+Test Steps:
+  1. Try to access account page
+  2. Verify access denied
+Test Data: N/A
+Expected Result: Access denied, redirected to login
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+Test Case ID: SEC_002
+Title: Password masking works in login form
+Module: Security
+Preconditions: Login page loaded
+Test Steps:
+  1. Enter password
+  2. Verify masking
+Test Data: Password: "testpass"
+Expected Result: Password masked
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: SEC_003
+Title: Input sanitization prevents script injection
+Module: Security
+Preconditions: Any input form
+Test Steps:
+  1. Enter script in input
+Test Data: <script>alert('x')</script>
+Expected Result: Input sanitized, no script executed
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+Test Case ID: SEC_004
+Title: Access restriction for unauthenticated users
+Module: Security
+Preconditions: Not logged in
+Test Steps:
+  1. Try to access order history
+Test Data: N/A
+Expected Result: Access denied
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+Test Case ID: SEC_005
+Title: Authentication validation for session expiry
+Module: Security
+Preconditions: User logged in
+Test Steps:
+  1. Wait for session expiry
+  2. Try to access account
+Test Data: N/A
+Expected Result: Redirected to login
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+11. Edge Case & Error Handling
+------------------------------
+Test Case ID: ERROR_001
+Title: Invalid input shows error message
+Module: Error Handling
+Preconditions: Form page loaded
+Test Steps:
+  1. Enter invalid data
+  2. Submit
+  3. Verify error message
+Test Data: Email: "abc"
+Expected Result: Error message displayed
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+Test Case ID: ERROR_002
+Title: Server error displays error page
+Module: Error Handling
+Preconditions: Simulate server error
+Test Steps:
+  1. Trigger server error
+Test Data: N/A
+Expected Result: Error page displayed
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+Test Case ID: ERROR_003
+Title: Client-side validation prevents form submission
+Module: Error Handling
+Preconditions: Form page loaded
+Test Steps:
+  1. Enter invalid data
+  2. Try to submit
+Test Data: Email: "abc"
+Expected Result: Form not submitted, error shown
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: ERROR_004
+Title: Session expiry recovers cart
+Module: Error Handling
+Preconditions: Cart with items, session expires
+Test Steps:
+  1. Wait for session expiry
+  2. Log in again
+Test Data: N/A
+Expected Result: Cart recovered
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: ERROR_005
+Title: Retry mechanism works on failed process
+Module: Error Handling
+Preconditions: Failed payment
+Test Steps:
+  1. Retry payment
+Test Data: Payment: Credit Card
+Expected Result: Payment retried
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+12. Notifications & Communication
+----------------------------------
+Test Case ID: NOTIF_001
+Title: Order confirmation email sent after purchase
+Module: Notifications
+Preconditions: Order placed
+Test Steps:
+  1. Complete purchase
+  2. Check email
+Test Data: Email address
+Expected Result: Confirmation email received
+Actual Result: 
+Status: 
+Priority: High
+Notes/Comments: 
+
+Test Case ID: NOTIF_002
+Title: SMS trigger sent for order confirmation
+Module: Notifications
+Preconditions: Order placed
+Test Steps:
+  1. Complete purchase
+  2. Check SMS
+Test Data: Mobile number
+Expected Result: SMS received
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: NOTIF_003
+Title: Contact form submission sends email
+Module: Notifications
+Preconditions: Contact form loaded
+Test Steps:
+  1. Submit contact form
+Test Data: Name, email, message
+Expected Result: Email sent to support
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: NOTIF_004
+Title: Newsletter subscription confirmation email sent
+Module: Notifications
+Preconditions: Newsletter form loaded
+Test Steps:
+  1. Subscribe to newsletter
+Test Data: Email address
+Expected Result: Confirmation email received
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: NOTIF_005
+Title: Unsubscription flow removes user from list
+Module: Notifications
+Preconditions: User subscribed
+Test Steps:
+  1. Unsubscribe from newsletter
+Test Data: Email address
+Expected Result: User removed from list
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+13. General Usability & Accessibility
+-------------------------------------
+Test Case ID: ACCESS_001
+Title: All buttons have accessible labels
+Module: Accessibility
+Preconditions: Any page loaded
+Test Steps:
+  1. Inspect buttons
+  2. Verify accessible labels
+Test Data: N/A
+Expected Result: All buttons have ARIA labels
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: ACCESS_002
+Title: UI consistency across screens
+Module: Accessibility
+Preconditions: Any page loaded
+Test Steps:
+  1. Navigate multiple screens
+  2. Verify UI consistency
+Test Data: N/A
+Expected Result: Consistent UI
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: ACCESS_003
+Title: Tooltip and label verification
+Module: Accessibility
+Preconditions: Any page loaded
+Test Steps:
+  1. Inspect tooltips and labels
+Test Data: N/A
+Expected Result: All tooltips and labels present
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: ACCESS_004
+Title: ARIA compliance for navigation
+Module: Accessibility
+Preconditions: Any page loaded
+Test Steps:
+  1. Inspect navigation elements
+Test Data: N/A
+Expected Result: ARIA attributes present
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
+Test Case ID: ACCESS_005
+Title: Color contrast and text readability
+Module: Accessibility
+Preconditions: Any page loaded
+Test Steps:
+  1. Inspect color contrast
+  2. Verify text readability
+Test Data: N/A
+Expected Result: Meets accessibility standards
+Actual Result: 
+Status: 
+Priority: Medium
+Notes/Comments: 
+
